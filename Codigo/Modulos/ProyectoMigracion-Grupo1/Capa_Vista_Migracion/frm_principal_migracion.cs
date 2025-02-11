@@ -16,12 +16,16 @@ namespace Capa_Vista_Migracion
 
     public partial class frm_principal_migracion : Form
     {
+
+        
+
         string idUsuario;
         Controlador cn = new Controlador();
         public frm_principal_migracion(String idUsuario)
         {
             this.idUsuario = idUsuario;
             InitializeComponent();
+            PersonalizarDiseño();
 
 
             //this.WindowState = FormWindowState.Maximized; // Maximiza el formulario al iniciar
@@ -33,30 +37,42 @@ namespace Capa_Vista_Migracion
              Btn_restaurar.Visible = true;*/
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            ocultaSubMenu();
+        }
+
+        private void PersonalizarDiseño()
+        {
+            PanelSubmenuMantenimientos.Visible = false;
+            PanelSubmenuGeneracionPasaporte.Visible = false;
+            PanelSubmenuGeneracionPasaporteMenor.Visible = false;
+        }
+
+        private void OcualtarSubmenu()
+        {
+            if (PanelSubmenuMantenimientos.Visible == true)
+                PanelSubmenuMantenimientos.Visible = false;
+            if (PanelSubmenuGeneracionPasaporte.Visible == true)
+               PanelSubmenuGeneracionPasaporte.Visible = false;
+            if (PanelSubmenuGeneracionPasaporteMenor.Visible == true)
+               PanelSubmenuGeneracionPasaporteMenor.Visible = false;
 
         }
 
-        private void ocultaSubMenu()
+        private void MostrarSubmenu(Panel subMenu)
         {
-            if (Pnl_mantenimientos.Visible == true)
-                Pnl_mantenimientos.Visible = false;
-            if (Pnl_generacion.Visible == true)
-                Pnl_generacion.Visible = false;
-            if (Pnl_genproc.Visible == true)
-                Pnl_genproc.Visible = false;
-        }
-
-        private void muestraSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
+            if(subMenu.Visible == false)
             {
-                ocultaSubMenu();
+                OcualtarSubmenu();
                 subMenu.Visible = true;
             }
             else
+            {
                 subMenu.Visible = false;
+            }
         }
+
+
+
+
 
         #region Funcionalidades del formulario
         //Metodo para Redimensionar el tamaño del forumulario en tiempo de ejecuciòn
@@ -90,7 +106,7 @@ namespace Capa_Vista_Migracion
             sizeGripRectangle = new Rectangle(this.ClientRectangle.Width - tolerance, this.ClientRectangle.Height - tolerance, tolerance, tolerance);
 
             region.Exclude(sizeGripRectangle);
-            this.Pnl_contenedor.Region = region;
+            this.Pnl_Formulario.Region = region;
             this.Invalidate();
         }
         //Color y Grip de rectangulo inferior
@@ -114,64 +130,80 @@ namespace Capa_Vista_Migracion
         int lx, ly;
         int sw, sh;
 
-
-        private void Btn_Mantenimientos_Click_1(object sender, EventArgs e)
-        {
-            muestraSubMenu(Pnl_mantenimientos);
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Btn_GeneracionMenor_Click(object sender, EventArgs e)
-        {
-            muestraSubMenu(Pnl_genproc);
-        }
-
-        private void Btn_Generacion_Click(object sender, EventArgs e)
-        {
-            muestraSubMenu(Pnl_generacion);
-        }
-
-        private void Btn_restaurar_Click(object sender, EventArgs e)
-        {
-            Btn_maximizar.Visible = true;
-            Btn_restaurar.Visible = false;
-            this.Size = new Size(sw, sh);
-            this.Location = new Point(lx, ly);
-        }
 
         private void Btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+  
+
+     
+        private void btn_Mantenimientos_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frm_citas>(); // Pasa el idUsuario
-            Btn_Citas.BackColor = Color.FromArgb(12, 61, 92);
-            ocultaSubMenu();
+            MostrarSubmenu(PanelSubmenuMantenimientos);
         }
 
-        private void Btn_Usuario_Click(object sender, EventArgs e)
+        private void btn_Usuario_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario<Frm_usuario>(); // Pasa el idUsuario
-            Btn_Usuario.BackColor = Color.FromArgb(12, 61, 92);
-            ocultaSubMenu();
+            //Codigo para mostrar otro formulario
+            
+            OcualtarSubmenu();
         }
 
-        private void Btn_Pago_Click(object sender, EventArgs e)
+        private void btn_Pago_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario<frm_pago>(); // Pasa el idUsuario
-            Btn_Pago.BackColor = Color.FromArgb(12, 61, 92);
-            ocultaSubMenu();
+            //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_pago>();
+            OcualtarSubmenu();
+        }
+
+        private void btn_Citas_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_citas>();
+            OcualtarSubmenu();
+        }
+
+        private void btn_GeneracionPasaporte_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(PanelSubmenuGeneracionPasaporte);
+        }
+
+        private void btn_Nuevo_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Renovacion_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_GeneracionPasaporteMenor_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(PanelSubmenuGeneracionPasaporteMenor);
+        }
+
+        private void btn_NuevoMenor_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_RenovacionMenor_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
@@ -203,7 +235,7 @@ namespace Capa_Vista_Migracion
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["Form1"] == null)
-                Btn_Usuario.BackColor = Color.FromArgb(4, 41, 68);
+                btn_Salir.BackColor = Color.FromArgb(4, 41, 68);
         }
 
     }
