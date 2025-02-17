@@ -41,19 +41,19 @@ namespace Capa_Vista_Migracion
 
         private void PersonalizarDiseño()
         {
-            PanelSubmenuMantenimientos.Visible = false;
-            PanelSubmenuGeneracionPasaporte.Visible = false;
-            PanelSubmenuGeneracionPasaporteMenor.Visible = false;
+            pnl_SubmenuMantenimientos.Visible = false;
+            pnl_Generacionpasaporte.Visible = false;
+            pnl_Generacionpasaportemenor.Visible = false;
         }
 
         private void OcualtarSubmenu()
         {
-            if (PanelSubmenuMantenimientos.Visible == true)
-                PanelSubmenuMantenimientos.Visible = false;
-            if (PanelSubmenuGeneracionPasaporte.Visible == true)
-               PanelSubmenuGeneracionPasaporte.Visible = false;
-            if (PanelSubmenuGeneracionPasaporteMenor.Visible == true)
-               PanelSubmenuGeneracionPasaporteMenor.Visible = false;
+            if (pnl_SubmenuMantenimientos.Visible == true)
+                pnl_SubmenuMantenimientos.Visible = false;
+            if (pnl_Generacionpasaporte.Visible == true)
+                pnl_Generacionpasaporte.Visible = false;
+            if (pnl_Generacionpasaportemenor.Visible == true)
+                pnl_Generacionpasaportemenor.Visible = false;
 
         }
 
@@ -148,7 +148,7 @@ namespace Capa_Vista_Migracion
      
         private void btn_Mantenimientos_Click(object sender, EventArgs e)
         {
-            MostrarSubmenu(PanelSubmenuMantenimientos);
+            MostrarSubmenu(pnl_SubmenuMantenimientos);
         }
 
         private void btn_Usuario_Click_1(object sender, EventArgs e)
@@ -168,13 +168,12 @@ namespace Capa_Vista_Migracion
         private void btn_Citas_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
-            AbrirFormulario<frm_citas>();
             OcualtarSubmenu();
         }
 
         private void btn_GeneracionPasaporte_Click(object sender, EventArgs e)
         {
-            MostrarSubmenu(PanelSubmenuGeneracionPasaporte);
+            MostrarSubmenu(pnl_Generacionpasaporte);
         }
 
         private void btn_Nuevo_Click(object sender, EventArgs e)
@@ -191,7 +190,7 @@ namespace Capa_Vista_Migracion
 
         private void btn_GeneracionPasaporteMenor_Click(object sender, EventArgs e)
         {
-            MostrarSubmenu(PanelSubmenuGeneracionPasaporteMenor);
+            MostrarSubmenu(pnl_Generacionpasaportemenor);
         }
 
         private void btn_NuevoMenor_Click(object sender, EventArgs e)
@@ -204,6 +203,93 @@ namespace Capa_Vista_Migracion
         {
             //Codigo para mostrar otro formulario
             OcualtarSubmenu();
+        }
+
+        private void btn_Empleado_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Nacionalidad_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Usuario_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Menordeedad_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Tutorlegal_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Cita_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Citamenor_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Pago_Click(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Generaciondepasaporte_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(pnl_Generacionpasaporte);
+        }
+
+        private void btn_Generaciondepasaportemenor_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(pnl_Generacionpasaportemenor);
+        }
+
+        private void btn_Nuevo_Click_1(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Renovacion_Click_1(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Nuevomenor_Click_1(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Renovacionmenor_Click_1(object sender, EventArgs e)
+        {
+            //Codigo para mostrar otro formulario
+            OcualtarSubmenu();
+        }
+
+        private void btn_Salir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
