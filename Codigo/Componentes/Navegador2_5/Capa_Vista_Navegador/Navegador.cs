@@ -2617,7 +2617,7 @@ namespace Capa_Vista_Navegador
             string sExecutablePath = AppDomain.CurrentDomain.BaseDirectory;
 
             // Buscar la carpeta raíz "proyectois2k25" desde el ejecutable
-            string sProjectPath = sFindProjectRootDirectory(sExecutablePath, "proyectois2k25");
+            string sProjectPath = sFindProjectRootDirectory(sExecutablePath, "ProyectoMigracion-Grupo1");
 
             if (string.IsNullOrEmpty(sProjectPath))
             {

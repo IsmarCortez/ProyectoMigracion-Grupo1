@@ -52,11 +52,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_citaMenor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_citaMenor.Designer.cs">
+      <DependentUpon>frm_citaMenor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_citas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_citas.Designer.cs">
       <DependentUpon>frm_citas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_empleado.Designer.cs">
+      <DependentUpon>frm_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_menor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_menor.Designer.cs">
+      <DependentUpon>frm_menor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_nacionalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nacionalidad.Designer.cs">
+      <DependentUpon>frm_nacionalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_oficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_oficina.Designer.cs">
+      <DependentUpon>frm_oficina.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_pago.cs">
       <SubType>Form</SubType>
@@ -69,6 +99,12 @@
     </Compile>
     <Compile Include="frm_principal_migracion.Designer.cs">
       <DependentUpon>frm_principal_migracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tutor.Designer.cs">
+      <DependentUpon>frm_tutor.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_usuario.cs">
       <SubType>Form</SubType>
@@ -84,14 +120,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frm_citaMenor.resx">
+      <DependentUpon>frm_citaMenor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_citas.resx">
       <DependentUpon>frm_citas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_empleado.resx">
+      <DependentUpon>frm_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_menor.resx">
+      <DependentUpon>frm_menor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_nacionalidad.resx">
+      <DependentUpon>frm_nacionalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_oficina.resx">
+      <DependentUpon>frm_oficina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_pago.resx">
       <DependentUpon>frm_pago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_principal_migracion.resx">
       <DependentUpon>frm_principal_migracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tutor.resx">
+      <DependentUpon>frm_tutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_usuario.resx">
       <DependentUpon>Frm_usuario.cs</DependentUpon>

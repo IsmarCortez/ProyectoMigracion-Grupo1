@@ -78,8 +78,9 @@ namespace Capa_Vista_Migracion
             this.pnl_MenuLateral.Controls.Add(this.pnl_Logo);
             this.pnl_MenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_MenuLateral.Location = new System.Drawing.Point(0, 0);
+            this.pnl_MenuLateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_MenuLateral.Name = "pnl_MenuLateral";
-            this.pnl_MenuLateral.Size = new System.Drawing.Size(280, 749);
+            this.pnl_MenuLateral.Size = new System.Drawing.Size(373, 922);
             this.pnl_MenuLateral.TabIndex = 0;
             // 
             // btn_Salir
@@ -90,9 +91,10 @@ namespace Capa_Vista_Migracion
             this.btn_Salir.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Image")));
             this.btn_Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Salir.Location = new System.Drawing.Point(0, 778);
+            this.btn_Salir.Location = new System.Drawing.Point(0, 955);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(263, 45);
+            this.btn_Salir.Size = new System.Drawing.Size(352, 55);
             this.btn_Salir.TabIndex = 8;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -106,9 +108,10 @@ namespace Capa_Vista_Migracion
             this.pnl_Generacionpasaportemenor.Controls.Add(this.btn_Renovacionmenor);
             this.pnl_Generacionpasaportemenor.Controls.Add(this.btn_Nuevomenor);
             this.pnl_Generacionpasaportemenor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_Generacionpasaportemenor.Location = new System.Drawing.Point(0, 694);
+            this.pnl_Generacionpasaportemenor.Location = new System.Drawing.Point(0, 852);
+            this.pnl_Generacionpasaportemenor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Generacionpasaportemenor.Name = "pnl_Generacionpasaportemenor";
-            this.pnl_Generacionpasaportemenor.Size = new System.Drawing.Size(263, 84);
+            this.pnl_Generacionpasaportemenor.Size = new System.Drawing.Size(352, 103);
             this.pnl_Generacionpasaportemenor.TabIndex = 7;
             // 
             // btn_Renovacionmenor
@@ -119,10 +122,11 @@ namespace Capa_Vista_Migracion
             this.btn_Renovacionmenor.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Renovacionmenor.Image = ((System.Drawing.Image)(resources.GetObject("btn_Renovacionmenor.Image")));
             this.btn_Renovacionmenor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Renovacionmenor.Location = new System.Drawing.Point(0, 40);
+            this.btn_Renovacionmenor.Location = new System.Drawing.Point(0, 49);
+            this.btn_Renovacionmenor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Renovacionmenor.Name = "btn_Renovacionmenor";
-            this.btn_Renovacionmenor.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Renovacionmenor.Size = new System.Drawing.Size(263, 40);
+            this.btn_Renovacionmenor.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Renovacionmenor.Size = new System.Drawing.Size(352, 49);
             this.btn_Renovacionmenor.TabIndex = 3;
             this.btn_Renovacionmenor.Text = "Renovación";
             this.btn_Renovacionmenor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,9 +143,10 @@ namespace Capa_Vista_Migracion
             this.btn_Nuevomenor.Image = ((System.Drawing.Image)(resources.GetObject("btn_Nuevomenor.Image")));
             this.btn_Nuevomenor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Nuevomenor.Location = new System.Drawing.Point(0, 0);
+            this.btn_Nuevomenor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Nuevomenor.Name = "btn_Nuevomenor";
-            this.btn_Nuevomenor.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Nuevomenor.Size = new System.Drawing.Size(263, 40);
+            this.btn_Nuevomenor.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Nuevomenor.Size = new System.Drawing.Size(352, 49);
             this.btn_Nuevomenor.TabIndex = 2;
             this.btn_Nuevomenor.Text = "Nuevo";
             this.btn_Nuevomenor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,9 +162,10 @@ namespace Capa_Vista_Migracion
             this.btn_Generaciondepasaportemenor.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Generaciondepasaportemenor.Image = ((System.Drawing.Image)(resources.GetObject("btn_Generaciondepasaportemenor.Image")));
             this.btn_Generaciondepasaportemenor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Generaciondepasaportemenor.Location = new System.Drawing.Point(0, 649);
+            this.btn_Generaciondepasaportemenor.Location = new System.Drawing.Point(0, 797);
+            this.btn_Generaciondepasaportemenor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Generaciondepasaportemenor.Name = "btn_Generaciondepasaportemenor";
-            this.btn_Generaciondepasaportemenor.Size = new System.Drawing.Size(263, 45);
+            this.btn_Generaciondepasaportemenor.Size = new System.Drawing.Size(352, 55);
             this.btn_Generaciondepasaportemenor.TabIndex = 6;
             this.btn_Generaciondepasaportemenor.Text = "Generación de Pasaporte Menor";
             this.btn_Generaciondepasaportemenor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -173,9 +179,10 @@ namespace Capa_Vista_Migracion
             this.pnl_Generacionpasaporte.Controls.Add(this.btn_Renovacion);
             this.pnl_Generacionpasaporte.Controls.Add(this.btn_Nuevo);
             this.pnl_Generacionpasaporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_Generacionpasaporte.Location = new System.Drawing.Point(0, 565);
+            this.pnl_Generacionpasaporte.Location = new System.Drawing.Point(0, 694);
+            this.pnl_Generacionpasaporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Generacionpasaporte.Name = "pnl_Generacionpasaporte";
-            this.pnl_Generacionpasaporte.Size = new System.Drawing.Size(263, 84);
+            this.pnl_Generacionpasaporte.Size = new System.Drawing.Size(352, 103);
             this.pnl_Generacionpasaporte.TabIndex = 5;
             // 
             // btn_Renovacion
@@ -186,10 +193,11 @@ namespace Capa_Vista_Migracion
             this.btn_Renovacion.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Renovacion.Image = ((System.Drawing.Image)(resources.GetObject("btn_Renovacion.Image")));
             this.btn_Renovacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Renovacion.Location = new System.Drawing.Point(0, 40);
+            this.btn_Renovacion.Location = new System.Drawing.Point(0, 49);
+            this.btn_Renovacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Renovacion.Name = "btn_Renovacion";
-            this.btn_Renovacion.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Renovacion.Size = new System.Drawing.Size(263, 40);
+            this.btn_Renovacion.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Renovacion.Size = new System.Drawing.Size(352, 49);
             this.btn_Renovacion.TabIndex = 3;
             this.btn_Renovacion.Text = "Renovación";
             this.btn_Renovacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,9 +214,10 @@ namespace Capa_Vista_Migracion
             this.btn_Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Nuevo.Image")));
             this.btn_Nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Nuevo.Location = new System.Drawing.Point(0, 0);
+            this.btn_Nuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Nuevo.Name = "btn_Nuevo";
-            this.btn_Nuevo.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Nuevo.Size = new System.Drawing.Size(263, 40);
+            this.btn_Nuevo.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Nuevo.Size = new System.Drawing.Size(352, 49);
             this.btn_Nuevo.TabIndex = 2;
             this.btn_Nuevo.Text = "Nuevo";
             this.btn_Nuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -224,9 +233,10 @@ namespace Capa_Vista_Migracion
             this.btn_Generaciondepasaporte.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Generaciondepasaporte.Image = ((System.Drawing.Image)(resources.GetObject("btn_Generaciondepasaporte.Image")));
             this.btn_Generaciondepasaporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Generaciondepasaporte.Location = new System.Drawing.Point(0, 520);
+            this.btn_Generaciondepasaporte.Location = new System.Drawing.Point(0, 639);
+            this.btn_Generaciondepasaporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Generaciondepasaporte.Name = "btn_Generaciondepasaporte";
-            this.btn_Generaciondepasaporte.Size = new System.Drawing.Size(263, 45);
+            this.btn_Generaciondepasaporte.Size = new System.Drawing.Size(352, 55);
             this.btn_Generaciondepasaporte.TabIndex = 4;
             this.btn_Generaciondepasaporte.Text = "Generación de Pasaporte";
             this.btn_Generaciondepasaporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,9 +252,10 @@ namespace Capa_Vista_Migracion
             this.btn_Pago.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Pago.Image = ((System.Drawing.Image)(resources.GetObject("btn_Pago.Image")));
             this.btn_Pago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Pago.Location = new System.Drawing.Point(0, 475);
+            this.btn_Pago.Location = new System.Drawing.Point(0, 584);
+            this.btn_Pago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Pago.Name = "btn_Pago";
-            this.btn_Pago.Size = new System.Drawing.Size(263, 45);
+            this.btn_Pago.Size = new System.Drawing.Size(352, 55);
             this.btn_Pago.TabIndex = 3;
             this.btn_Pago.Text = "Pagos";
             this.btn_Pago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,9 +275,10 @@ namespace Capa_Vista_Migracion
             this.pnl_SubmenuMantenimientos.Controls.Add(this.btn_Empleado);
             this.pnl_SubmenuMantenimientos.Controls.Add(this.btn_Oficina);
             this.pnl_SubmenuMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_SubmenuMantenimientos.Location = new System.Drawing.Point(0, 145);
+            this.pnl_SubmenuMantenimientos.Location = new System.Drawing.Point(0, 178);
+            this.pnl_SubmenuMantenimientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_SubmenuMantenimientos.Name = "pnl_SubmenuMantenimientos";
-            this.pnl_SubmenuMantenimientos.Size = new System.Drawing.Size(263, 330);
+            this.pnl_SubmenuMantenimientos.Size = new System.Drawing.Size(352, 406);
             this.pnl_SubmenuMantenimientos.TabIndex = 2;
             // 
             // btn_Citamenor
@@ -277,10 +289,11 @@ namespace Capa_Vista_Migracion
             this.btn_Citamenor.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Citamenor.Image = ((System.Drawing.Image)(resources.GetObject("btn_Citamenor.Image")));
             this.btn_Citamenor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Citamenor.Location = new System.Drawing.Point(0, 280);
+            this.btn_Citamenor.Location = new System.Drawing.Point(0, 343);
+            this.btn_Citamenor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Citamenor.Name = "btn_Citamenor";
-            this.btn_Citamenor.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Citamenor.Size = new System.Drawing.Size(263, 40);
+            this.btn_Citamenor.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Citamenor.Size = new System.Drawing.Size(352, 49);
             this.btn_Citamenor.TabIndex = 9;
             this.btn_Citamenor.Text = "Cita menor";
             this.btn_Citamenor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,10 +309,11 @@ namespace Capa_Vista_Migracion
             this.btn_Cita.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cita.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cita.Image")));
             this.btn_Cita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Cita.Location = new System.Drawing.Point(0, 240);
+            this.btn_Cita.Location = new System.Drawing.Point(0, 294);
+            this.btn_Cita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cita.Name = "btn_Cita";
-            this.btn_Cita.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Cita.Size = new System.Drawing.Size(263, 40);
+            this.btn_Cita.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Cita.Size = new System.Drawing.Size(352, 49);
             this.btn_Cita.TabIndex = 8;
             this.btn_Cita.Text = "Cita";
             this.btn_Cita.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -315,10 +329,11 @@ namespace Capa_Vista_Migracion
             this.btn_Tutorlegal.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tutorlegal.Image = ((System.Drawing.Image)(resources.GetObject("btn_Tutorlegal.Image")));
             this.btn_Tutorlegal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Tutorlegal.Location = new System.Drawing.Point(0, 200);
+            this.btn_Tutorlegal.Location = new System.Drawing.Point(0, 245);
+            this.btn_Tutorlegal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Tutorlegal.Name = "btn_Tutorlegal";
-            this.btn_Tutorlegal.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Tutorlegal.Size = new System.Drawing.Size(263, 40);
+            this.btn_Tutorlegal.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Tutorlegal.Size = new System.Drawing.Size(352, 49);
             this.btn_Tutorlegal.TabIndex = 7;
             this.btn_Tutorlegal.Text = "Tutor legal";
             this.btn_Tutorlegal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -334,10 +349,11 @@ namespace Capa_Vista_Migracion
             this.btn_Menordeedad.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Menordeedad.Image = ((System.Drawing.Image)(resources.GetObject("btn_Menordeedad.Image")));
             this.btn_Menordeedad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Menordeedad.Location = new System.Drawing.Point(0, 160);
+            this.btn_Menordeedad.Location = new System.Drawing.Point(0, 196);
+            this.btn_Menordeedad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Menordeedad.Name = "btn_Menordeedad";
-            this.btn_Menordeedad.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Menordeedad.Size = new System.Drawing.Size(263, 40);
+            this.btn_Menordeedad.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Menordeedad.Size = new System.Drawing.Size(352, 49);
             this.btn_Menordeedad.TabIndex = 6;
             this.btn_Menordeedad.Text = "Menor de edad";
             this.btn_Menordeedad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -353,10 +369,11 @@ namespace Capa_Vista_Migracion
             this.btn_Usuario.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Usuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_Usuario.Image")));
             this.btn_Usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Usuario.Location = new System.Drawing.Point(0, 120);
+            this.btn_Usuario.Location = new System.Drawing.Point(0, 147);
+            this.btn_Usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Usuario.Name = "btn_Usuario";
-            this.btn_Usuario.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Usuario.Size = new System.Drawing.Size(263, 40);
+            this.btn_Usuario.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Usuario.Size = new System.Drawing.Size(352, 49);
             this.btn_Usuario.TabIndex = 5;
             this.btn_Usuario.Text = "Usuario";
             this.btn_Usuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -372,10 +389,11 @@ namespace Capa_Vista_Migracion
             this.btn_Nacionalidad.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Nacionalidad.Image = ((System.Drawing.Image)(resources.GetObject("btn_Nacionalidad.Image")));
             this.btn_Nacionalidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Nacionalidad.Location = new System.Drawing.Point(0, 80);
+            this.btn_Nacionalidad.Location = new System.Drawing.Point(0, 98);
+            this.btn_Nacionalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Nacionalidad.Name = "btn_Nacionalidad";
-            this.btn_Nacionalidad.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Nacionalidad.Size = new System.Drawing.Size(263, 40);
+            this.btn_Nacionalidad.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Nacionalidad.Size = new System.Drawing.Size(352, 49);
             this.btn_Nacionalidad.TabIndex = 4;
             this.btn_Nacionalidad.Text = "Nacionalidad";
             this.btn_Nacionalidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -391,10 +409,11 @@ namespace Capa_Vista_Migracion
             this.btn_Empleado.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Empleado.Image = ((System.Drawing.Image)(resources.GetObject("btn_Empleado.Image")));
             this.btn_Empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Empleado.Location = new System.Drawing.Point(0, 40);
+            this.btn_Empleado.Location = new System.Drawing.Point(0, 49);
+            this.btn_Empleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Empleado.Name = "btn_Empleado";
-            this.btn_Empleado.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Empleado.Size = new System.Drawing.Size(263, 40);
+            this.btn_Empleado.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Empleado.Size = new System.Drawing.Size(352, 49);
             this.btn_Empleado.TabIndex = 3;
             this.btn_Empleado.Text = "Empleado";
             this.btn_Empleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -411,9 +430,10 @@ namespace Capa_Vista_Migracion
             this.btn_Oficina.Image = ((System.Drawing.Image)(resources.GetObject("btn_Oficina.Image")));
             this.btn_Oficina.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Oficina.Location = new System.Drawing.Point(0, 0);
+            this.btn_Oficina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Oficina.Name = "btn_Oficina";
-            this.btn_Oficina.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btn_Oficina.Size = new System.Drawing.Size(263, 40);
+            this.btn_Oficina.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
+            this.btn_Oficina.Size = new System.Drawing.Size(352, 49);
             this.btn_Oficina.TabIndex = 2;
             this.btn_Oficina.Text = "Oficina";
             this.btn_Oficina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -429,9 +449,10 @@ namespace Capa_Vista_Migracion
             this.btn_Mantenimientos.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Mantenimientos.Image = ((System.Drawing.Image)(resources.GetObject("btn_Mantenimientos.Image")));
             this.btn_Mantenimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Mantenimientos.Location = new System.Drawing.Point(0, 100);
+            this.btn_Mantenimientos.Location = new System.Drawing.Point(0, 123);
+            this.btn_Mantenimientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Mantenimientos.Name = "btn_Mantenimientos";
-            this.btn_Mantenimientos.Size = new System.Drawing.Size(263, 45);
+            this.btn_Mantenimientos.Size = new System.Drawing.Size(352, 55);
             this.btn_Mantenimientos.TabIndex = 1;
             this.btn_Mantenimientos.Text = "Mantenimientos";
             this.btn_Mantenimientos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -444,19 +465,21 @@ namespace Capa_Vista_Migracion
             this.pnl_Logo.Controls.Add(this.lbl_Logo);
             this.pnl_Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Logo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Logo.Name = "pnl_Logo";
-            this.pnl_Logo.Size = new System.Drawing.Size(263, 100);
+            this.pnl_Logo.Size = new System.Drawing.Size(352, 123);
             this.pnl_Logo.TabIndex = 0;
             // 
             // lbl_Logo
             // 
             this.lbl_Logo.AutoSize = true;
             this.lbl_Logo.Image = ((System.Drawing.Image)(resources.GetObject("lbl_Logo.Image")));
-            this.lbl_Logo.Location = new System.Drawing.Point(30, 9);
-            this.lbl_Logo.MaximumSize = new System.Drawing.Size(200, 80);
-            this.lbl_Logo.MinimumSize = new System.Drawing.Size(200, 80);
+            this.lbl_Logo.Location = new System.Drawing.Point(40, 11);
+            this.lbl_Logo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Logo.MaximumSize = new System.Drawing.Size(267, 98);
+            this.lbl_Logo.MinimumSize = new System.Drawing.Size(267, 98);
             this.lbl_Logo.Name = "lbl_Logo";
-            this.lbl_Logo.Size = new System.Drawing.Size(200, 80);
+            this.lbl_Logo.Size = new System.Drawing.Size(267, 98);
             this.lbl_Logo.TabIndex = 0;
             // 
             // Pnl_Formulario
@@ -464,9 +487,10 @@ namespace Capa_Vista_Migracion
             this.Pnl_Formulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(217)))), ((int)(((byte)(101)))));
             this.Pnl_Formulario.Controls.Add(this.lbl_LogoGrande);
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_Formulario.Location = new System.Drawing.Point(280, 0);
+            this.Pnl_Formulario.Location = new System.Drawing.Point(373, 0);
+            this.Pnl_Formulario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pnl_Formulario.Name = "Pnl_Formulario";
-            this.Pnl_Formulario.Size = new System.Drawing.Size(726, 749);
+            this.Pnl_Formulario.Size = new System.Drawing.Size(968, 922);
             this.Pnl_Formulario.TabIndex = 1;
             // 
             // lbl_LogoGrande
@@ -474,21 +498,22 @@ namespace Capa_Vista_Migracion
             this.lbl_LogoGrande.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_LogoGrande.AutoSize = true;
             this.lbl_LogoGrande.Image = ((System.Drawing.Image)(resources.GetObject("lbl_LogoGrande.Image")));
-            this.lbl_LogoGrande.Location = new System.Drawing.Point(135, 260);
-            this.lbl_LogoGrande.MaximumSize = new System.Drawing.Size(500, 500);
-            this.lbl_LogoGrande.MinimumSize = new System.Drawing.Size(500, 200);
+            this.lbl_LogoGrande.Location = new System.Drawing.Point(180, 320);
+            this.lbl_LogoGrande.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_LogoGrande.MaximumSize = new System.Drawing.Size(667, 615);
+            this.lbl_LogoGrande.MinimumSize = new System.Drawing.Size(667, 246);
             this.lbl_LogoGrande.Name = "lbl_LogoGrande";
-            this.lbl_LogoGrande.Size = new System.Drawing.Size(500, 200);
+            this.lbl_LogoGrande.Size = new System.Drawing.Size(667, 246);
             this.lbl_LogoGrande.TabIndex = 0;
             // 
             // frm_principal_migracion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 749);
+            this.ClientSize = new System.Drawing.Size(1341, 922);
             this.Controls.Add(this.Pnl_Formulario);
             this.Controls.Add(this.pnl_MenuLateral);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_principal_migracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

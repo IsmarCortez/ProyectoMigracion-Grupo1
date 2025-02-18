@@ -1799,80 +1799,154 @@ CREATE TABLE IF NOT EXISTS `tbl_historial_servicio` (
 -- FIN APROBADO POR BRANDON BOCH
 
 
--- CREATE DATABASE IF NOT EXISTS sistemapasaportes;
--- USE sistemapasaportes;
-
 -- Tabla Nacionalidad
-CREATE TABLE IF NOT EXISTS nacionalidad (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(50) NOT NULL
-);
+CREATE TABLE IF NOT EXISTS Tbl_nacionalidad (
+  Pk_id_nacionalidad INT AUTO_INCREMENT NOT NULL,
+  nombre_nacionalidad VARCHAR(50) NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_nacionalidad)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 -- Tabla Usuario
-CREATE TABLE IF NOT EXISTS usuario (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(50) NOT NULL,
-  apellido VARCHAR(50) NOT NULL,
-  fecha_nacimiento DATE NOT NULL,
-  genero VARCHAR(50) NOT NULL,
-  direccion VARCHAR(50) NOT NULL,
-  telefono VARCHAR(15) NOT NULL,
-  correo VARCHAR(100) not null,
-  Estado TINYINT(4) NOT NULL
-);
+CREATE TABLE IF NOT EXISTS Tbl_usuario (
+  Pk_id_usuario INT AUTO_INCREMENT NOT NULL,
+  nombre_usuario VARCHAR(50) NOT NULL,
+  apellido_usuario VARCHAR(50) NOT NULL,
+  fecha_nacimiento_usuario DATE NOT NULL,
+  genero_usuario VARCHAR(50) NOT NULL,
+  DPI_usuario VARCHAR(13),
+  BoletoOrnato_usuario VARCHAR(12),
+  Fk_id_nacionalidad INT NOT NULL,
+  direccion_usuario TEXT NOT NULL,
+  telefono_usuario VARCHAR(15) NOT NULL,
+  correo_usuario VARCHAR(100) UNIQUE,
+ --  Fk_id_tutor INT NULL,  -- Tutor legal para menores
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_usuario),
+  FOREIGN KEY (Fk_id_nacionalidad) REFERENCES Tbl_nacionalidad(Pk_id_nacionalidad)
+ -- FOREIGN KEY (Fk_id_tutor) REFERENCES Tbl_usuario(Pk_id_usuario)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS Tbl_usuario_menor (
+  Pk_id_usuario_menor INT AUTO_INCREMENT NOT NULL,
+  nombre_usuario_menor VARCHAR(50) NOT NULL,
+  apellido_usuario_menor VARCHAR(50) NOT NULL,
+  fecha_nacimiento_usuario_menor DATE NOT NULL,
+  genero_usuario_menor VARCHAR(50) NOT NULL,
+  acta_nacimiento_usuario_menor VARCHAR(50) NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_usuario_menor)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+
+CREATE TABLE IF NOT EXISTS Tbl_tutor_menor (
+  Pk_id_tutor_menor INT AUTO_INCREMENT NOT NULL,
+  Fk_id_usuario_menor INT NOT NULL,
+  Fk_id_usuario INT NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_tutor_menor ),
+  FOREIGN KEY (Fk_id_usuario_menor) REFERENCES Tbl_usuario_menor(Pk_id_usuario_menor),
+  FOREIGN KEY (Fk_id_usuario) REFERENCES Tbl_usuario(Pk_id_usuario)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+
 
 -- Tabla Oficina
-CREATE TABLE IF NOT EXISTS oficina (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  direccion TEXT NOT NULL,
-  telefono VARCHAR(15) NOT NULL
-);
+CREATE TABLE IF NOT EXISTS Tbl_oficina (
+  Pk_id_oficina INT AUTO_INCREMENT NOT NULL,
+  nombre_oficina VARCHAR(100) NOT NULL,
+  direccion_oficina TEXT NOT NULL,
+  telefono_oficina VARCHAR(15) NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_oficina)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 -- Tabla Empleado
-CREATE TABLE IF NOT EXISTS empleado (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(50) NOT NULL,
-  apellido VARCHAR(50) NOT NULL,
-  cargo ENUM('Atencion', 'Supervisor', 'Administrador') NOT NULL,
-  oficina_id INT NOT NULL,
-  FOREIGN KEY (oficina_id) REFERENCES oficina(id)
-);
+CREATE TABLE IF NOT EXISTS Tbl_empleado (
+  Pk_id_empleado INT AUTO_INCREMENT NOT NULL,
+  nombre_empleado VARCHAR(50) NOT NULL,
+  apellido_empleado VARCHAR(50) NOT NULL,
+  cargo_empleado VARCHAR(50) NOT NULL,
+  Fk_id_oficina INT NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_empleado),
+  FOREIGN KEY (Fk_id_oficina) REFERENCES Tbl_oficina(Pk_id_oficina)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 -- Tabla Estado de Solicitud
-CREATE TABLE IF NOT EXISTS estado_solicitud (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  estado VARCHAR(50) NOT NULL
-);
+-- CREATE TABLE IF NOT EXISTS Tbl_estado_solicitud (
+--   Pk_id_estado_solicitud INT AUTO_INCREMENT NOT NULL,
+--   estado_solicitud VARCHAR(50) NOT NULL,
+--   estado TINYINT(1) NOT NULL DEFAULT 1,
+--   PRIMARY KEY (Pk_id_estado_solicitud)
+-- ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+-- Tabla Estado de Pasaporte
+-- CREATE TABLE IF NOT EXISTS Tbl_estado_pasaporte (
+--   Pk_id_estado_pasaporte INT AUTO_INCREMENT NOT NULL,
+--   estado_pasaporte VARCHAR(50) NOT NULL,
+--   estado TINYINT(1) NOT NULL DEFAULT 1,
+--   PRIMARY KEY (Pk_id_estado_pasaporte)
+-- ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 -- Tabla Cita
-CREATE TABLE IF NOT EXISTS cita (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  usuario_id INT NOT NULL,
-  fecha DATETIME NOT NULL,
-  Estado TINYINT(4) NOT NULL,
-  FOREIGN KEY (usuario_id) REFERENCES usuario(id)
-);
+CREATE TABLE IF NOT EXISTS Tbl_cita (
+  Pk_id_cita INT AUTO_INCREMENT NOT NULL,
+  Fk_id_usuario INT NOT NULL,
+  fecha_cita DATETIME NOT NULL,
+  Fk_id_oficina INT NOT NULL,
+  Fk_id_empleado INT NOT NULL,
+ --  Fk_id_estado_solicitud INT NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_cita),
+  FOREIGN KEY (Fk_id_usuario) REFERENCES Tbl_usuario(Pk_id_usuario),
+  FOREIGN KEY (Fk_id_oficina) REFERENCES Tbl_oficina(Pk_id_oficina),
+  FOREIGN KEY (Fk_id_empleado) REFERENCES Tbl_empleado(Pk_id_empleado)
+  -- FOREIGN KEY (Fk_id_estado_solicitud) REFERENCES Tbl_estado_solicitud(Pk_id_estado_solicitud)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
--- Tabla Pasaporte
-CREATE TABLE IF NOT EXISTS pasaporte (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  usuario_id INT NOT NULL,
-  numero VARCHAR(15) UNIQUE NOT NULL,
-  fecha_emision DATE NOT NULL,
-  fecha_expiracion DATE NOT NULL,
-  estado_id INT NOT NULL,
-  FOREIGN KEY (usuario_id) REFERENCES usuario(id),
-  FOREIGN KEY (estado_id) REFERENCES estado_solicitud(id)
-);
+CREATE TABLE IF NOT EXISTS Tbl_cita_menor (
+  Pk_id_cita_menor INT AUTO_INCREMENT NOT NULL,
+  Fk_id_usuario_menor INT NOT NULL,
+  Fk_id_cita INT NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_cita_menor),
+  FOREIGN KEY (Fk_id_usuario_menor) REFERENCES Tbl_usuario_menor(Pk_id_usuario_menor),
+  FOREIGN KEY (Fk_id_cita) REFERENCES Tbl_cita(Pk_id_cita)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 -- Tabla Pago
-CREATE TABLE IF NOT EXISTS pago (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  usuario_id INT NOT NULL,
-  monto DECIMAL(10,2) NOT NULL,
-  metodo VARCHAR(50) NOT NULL,
-  fecha DATETIME NOT NULL,
-  Estado TINYINT(4) NOT NULL,
-  FOREIGN KEY (usuario_id) REFERENCES usuario(id)
-);
+CREATE TABLE IF NOT EXISTS Tbl_pago (
+  Pk_id_pago INT AUTO_INCREMENT NOT NULL,
+  Fk_id_usuario INT NOT NULL,
+  Fk_id_cita INT NOT NULL,
+  monto_pago DECIMAL(10,2) NOT NULL,
+  metodo_pago ENUM('Tarjeta', 'Efectivo', 'Transferencia') NOT NULL,
+  fecha_pago DATETIME NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_pago),
+  FOREIGN KEY (Fk_id_usuario) REFERENCES Tbl_usuario(Pk_id_usuario),
+  FOREIGN KEY (Fk_id_cita) REFERENCES Tbl_cita(Pk_id_cita)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+-- Tabla Pasaporte
+CREATE TABLE IF NOT EXISTS Tbl_pasaporte (
+  Pk_id_pasaporte INT AUTO_INCREMENT NOT NULL,
+  Fk_id_usuario INT NOT NULL,
+  numero_pasaporte VARCHAR(15) UNIQUE NOT NULL,
+  fecha_emision_pasaporte DATE NOT NULL,
+  fecha_expiracion_pasaporte DATE NOT NULL,
+  Fk_id_estado_pasaporte INT NOT NULL,
+  Fk_id_usuario_menor INT NOT NULL,
+  estado TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (Pk_id_pasaporte),
+  FOREIGN KEY (Fk_id_usuario) REFERENCES Tbl_usuario(Pk_id_usuario),
+  FOREIGN KEY (Fk_id_usuario_menor) REFERENCES Tbl_usuario_menor(Pk_id_usuario_menor)
+  -- FOREIGN KEY (Fk_id_estado_pasaporte) REFERENCES Tbl_estado_pasaporte(Pk_id_estado_pasaporte)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+-- Agregar fotografia BLOB
+-- Agregar huella BLOB
+-- Fecha
+-- Hora 
+-- Sede

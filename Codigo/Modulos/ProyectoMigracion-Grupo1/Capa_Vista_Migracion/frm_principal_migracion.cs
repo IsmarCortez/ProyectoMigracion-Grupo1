@@ -168,6 +168,8 @@ namespace Capa_Vista_Migracion
         private void btn_Citas_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_oficina>();
+
             OcualtarSubmenu();
         }
 
@@ -208,42 +210,52 @@ namespace Capa_Vista_Migracion
         private void btn_Empleado_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
+            //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_empleado>();
+
             OcualtarSubmenu();
         }
 
         private void btn_Nacionalidad_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_nacionalidad>();
             OcualtarSubmenu();
         }
 
         private void btn_Usuario_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
+            //Codigo para mostrar otro formulario
+            AbrirFormulario<Frm_usuario>();
             OcualtarSubmenu();
         }
 
         private void btn_Menordeedad_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_menor>();
             OcualtarSubmenu();
         }
 
         private void btn_Tutorlegal_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_tutor>();
             OcualtarSubmenu();
         }
 
         private void btn_Cita_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_citas>();
             OcualtarSubmenu();
         }
 
         private void btn_Citamenor_Click(object sender, EventArgs e)
         {
             //Codigo para mostrar otro formulario
+            AbrirFormulario<frm_citaMenor>();
             OcualtarSubmenu();
         }
 
@@ -290,6 +302,11 @@ namespace Capa_Vista_Migracion
         private void btn_Salir_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
